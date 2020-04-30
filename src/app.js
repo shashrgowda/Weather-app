@@ -5,7 +5,7 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3003
 
 const srcDir = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -19,21 +19,21 @@ app.use(express.static(srcDir))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        author: 'Shashank'
+        author: 'Shashank Ravikumar'
     })
 })
 
 app.get('/about', (req,res) => {
     res.render('about', {
         title: 'About',
-        author: 'Shashank'
+        author: 'Shashank Ravikumar'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        author: 'Shashank',
+        author: 'Shashank Ravikumar',
         message: 'Help me!!!!'
     })
 })
@@ -71,7 +71,7 @@ app.get('/weather', (req, res) => {
 app.get('/help/*', (req,res) => {
     res.render('404', {
         title: '404',
-        author: 'Shashank',
+        author: 'Shashank Ravikumar',
         errorMessage: 'Article not found'
     })
 })
@@ -79,7 +79,7 @@ app.get('/help/*', (req,res) => {
 app.get('*', (req,res) => {
     res.render('404', {
         title: '404',
-        author: 'Shashank',
+        author: 'Shashank Ravikumar',
         errorMessage: 'Page not found'
     })
 })
