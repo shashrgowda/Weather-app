@@ -55,3 +55,11 @@ button {
 img {
     width: 200px;
 }
+
+.icon {
+    width: 50px;
+}
+
+.weather-icon {
+    display: inline;
+}
