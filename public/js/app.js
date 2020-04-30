@@ -16,8 +16,6 @@ form.addEventListener('submit', (e) => {
 
     fetch(`/weather?address=${search}`).then((res) => {
     res.json().then((data) => {
-        console.log(data);
-        
         if(data.error){
             messageOne.textContent = '';
             messageTwo.textContent = data.error
@@ -29,7 +27,6 @@ form.addEventListener('submit', (e) => {
             messageFour.textContent = `Chances of rain  -   ${data.data.precip}%`
             messageFive.textContent = `Humidity    -   ${data.data.humidity}%`
             
-            // messageTwo.textContent = `The temparature in ${data.location} is ${data.data.temperature}°C, but feels like ${data.data.feelslike}°C. Chances of rain is ${data.data.precip}%.`
         }
     })
 })
