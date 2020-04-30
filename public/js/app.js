@@ -21,8 +21,8 @@ form.addEventListener('submit', (e) => {
             messageTwo.textContent = data.error
         } else {
             messageOne.textContent = '';
-            messageOne.textContent = `City  -   ${data.location}`;
 
+            messageOne.textContent = `City  -   ${data.location}`;
             messageTwo.textContent = `Temperature   -   ${data.data.temperature}°C`
             messageThree.textContent = `Feels like  -   ${data.data.feelslike}°C`
             messageFour.textContent = `Chances of rain  -   ${data.data.precip}%`
